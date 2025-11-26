@@ -106,7 +106,7 @@ const PricingPage = () => {
 
                 {/* CTA Button */}
                 <button
-                  className={`w-full py-3 rounded-xl font-semibold text-lg transition-all duration-300 ${
+                  className={`w-full py-3 rounded-xl font-semibold text-lg cursor-pointer transition-all duration-300 ${
                     plan.isCurrent
                       ? "bg-[#009FF2] text-white hover:bg-[#0088d1]"
                       : "bg-gray-100 text-gray-800 hover:bg-gray-200"

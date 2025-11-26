@@ -5,25 +5,25 @@ import { Menu, X, User } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const location = useLocation();
 
   // Check login status from localStorage
-  useEffect(() => {
-    const checkLogin = () => {
-      const role = localStorage.getItem("userRole");
-      setIsLoggedIn(!!role);
-    };
+  // useEffect(() => {
+  //   const checkLogin = () => {
+  //     const role = localStorage.getItem("userRole");
+  //     setIsLoggedIn(!!role);
+  //   };
 
-    checkLogin();
-    window.addEventListener("storage", checkLogin);
-    return () => window.removeEventListener("storage", checkLogin);
-  }, []);
+  //   checkLogin();
+  //   window.addEventListener("storage", checkLogin);
+  //   return () => window.removeEventListener("storage", checkLogin);
+  // }, []);
 
-  useEffect(() => {
-    const role = localStorage.getItem("userRole");
-    setIsLoggedIn(!!role);
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   const role = localStorage.getItem("userRole");
+  //   setIsLoggedIn(!!role);
+  // }, [location.pathname]);
 
   const navLinks = [
     { to: "/", label: "Home" },

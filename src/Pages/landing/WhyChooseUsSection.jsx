@@ -52,7 +52,7 @@ const WhyChooseUsSection = () => {
             {/* CTA Button */}
             <div className="pt-4">
               <Link
-                to="/design"
+                to="/custom"
                 className="inline-flex items-center gap-3 bg-[#009FF2] hover:bg-[#0088d1] text-white font-semibold text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 Start Designing Now
                 <svg

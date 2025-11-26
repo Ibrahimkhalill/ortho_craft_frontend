@@ -6,7 +6,9 @@ const StatCard = ({ icon: Icon, label, value, change, bgColor, color }) => (
         <p className="text-gray-600 text-sm md:text-base font-medium">
           {label}
         </p>
-        <h3 className="text-2xl  font-bold text-gray-900 mt-2">{value}</h3>
+        <h3 className="sm:text-2xl text-xl  font-bold text-gray-900 mt-2">
+          {value}
+        </h3>
         {/* <div className="flex items-center gap-1 mt-2">
           <TrendingUp size={16} className="text-green-500" />
           <span className="text-green-500 text-xs md:text-sm font-semibold">

@@ -9,21 +9,9 @@ import Landingpage from "../Pages/landing/LandingPage";
 
 // Admin pages
 import Home from "../Pages/admin/home/Home";
-import AffiliateRestaurants from "../Pages/admin/resturant/AffiliateRestaurants";
-import BillingMonitor from "../Pages/admin/billing/BillingMonitor";
-import QRScanningTracking from "../Pages/admin/qr/QRScanningTracking";
 import SettingsPage from "../Pages/admin/Settings/SettingsPage";
 
-// Restaurant pages
-import RestaurantDashboard from "../Pages/restaurant/dashboard/RestaurantDashboard";
-import MenuManagement from "../Pages/restaurant/menu/MenuManagement";
-import BillDataManagementPage from "../Pages/restaurant/bill/BillDataMangement";
-import RestaurantAnalytics from "../Pages/restaurant/analysis/RestaurantAnalytics";
-import ResSettingsPage from "../Pages/restaurant/settings/ResSettingsPage";
-
-import ChatInterface from "../Pages/user/Chat";
 import UserProfile from "../Pages/user/UserProfile";
-import AIRecommendationPage from "../Pages/user/AIRecommendationPage";
 import Signup from "../Pages/Authentication/Signup";
 import UserSignIn from "../Pages/Authentication/UserSignIn";
 import PricingPage from "../Pages/landing/pricing/PricingPage";
@@ -31,6 +19,9 @@ import WelcomeStep from "../Pages/landing/custom/WelcomeStep";
 import UploadStep from "../Pages/landing/custom/UploadStep";
 import PreviewStep from "../Pages/landing/custom/PreviewStep";
 import DownloadStep from "../Pages/landing/custom/DownloadStep";
+import AboutPage from "../Pages/landing/about/About";
+import UserManagement from "../Pages/admin/user/UserMangement";
+import PricingPlans from "../Pages/admin/subscribtions/PricingPlans";
 
 const router = createBrowserRouter([
   // =====================================
@@ -41,9 +32,8 @@ const router = createBrowserRouter([
     element: <Dashboard />, // uses the menu based on role
     children: [
       { path: "dashboard", element: <Home /> },
-      { path: "restaurants", element: <AffiliateRestaurants /> },
-      { path: "billing", element: <BillingMonitor /> },
-      { path: "qr-tracking", element: <QRScanningTracking /> },
+      { path: "users", element: <UserManagement /> },
+      { path: "pricing", element: <PricingPlans /> },
       { path: "settings", element: <SettingsPage /> },
     ],
   },
@@ -51,17 +41,6 @@ const router = createBrowserRouter([
   // =====================================
   // RESTAURANT ROUTES
   // =====================================
-  {
-    path: "/restaurant",
-    element: <Dashboard />, // same layout but different menus
-    children: [
-      { path: "dashboard", element: <RestaurantDashboard /> },
-      { path: "menu", element: <MenuManagement /> },
-      { path: "bills", element: <BillDataManagementPage /> },
-      { path: "analytics", element: <RestaurantAnalytics /> },
-      { path: "settings", element: <ResSettingsPage /> },
-    ],
-  },
 
   // =====================================
   // PUBLIC ROUTES (No login required)
@@ -79,6 +58,7 @@ const router = createBrowserRouter([
       { path: "/custom/upload", element: <UploadStep /> },
       { path: "/custom/preview", element: <PreviewStep /> },
       { path: "/custom/download", element: <DownloadStep /> },
+      { path: "/about", element: <AboutPage /> },
       { path: "/otp", element: <OtpVerification /> },
       { path: "/forgot-password", element: <ForgetPassword /> },
       { path: "/reset_password", element: <ResetPass /> },
