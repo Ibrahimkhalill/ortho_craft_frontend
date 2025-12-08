@@ -17,7 +17,7 @@ const UserProfilePage = () => {
   return (
     <div className="min-h-screen bg-gray-50 ">
       <Navbar />
-      <div className="max-w-4xl mx-auto space-y-8 py-8 px-4 sm:py-12">
+      <div className="container mx-auto space-y-8 py-8 px-4 sm:px-10 2xl:px-0 sm:py-12">
         {/* Basic Information */}
         <section className="bg-white rounded-3xl shadow-lg border border-blue-100 overflow-hidden">
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 border-b border-blue-200">
@@ -49,7 +49,7 @@ const UserProfilePage = () => {
                   <input
                     type="text"
                     defaultValue="Sophia Alexa"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#009FF2] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#009FF2] focus:border-transparent outline-none"
                   />
                 </div>
 
@@ -72,7 +72,7 @@ const UserProfilePage = () => {
                   <input
                     type="tel"
                     defaultValue="000-0000-000"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#009FF2] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#009FF2] focus:border-transparent outline-none"
                   />
                 </div>
 
@@ -152,7 +152,7 @@ const UserProfilePage = () => {
                   <input
                     type={showPassword.current ? "text" : "password"}
                     placeholder="Enter Password"
-                    className="w-full px-5 py-4 bg-gray-50 border border-gray-300 rounded-2xl pr-12 focus:ring-2 focus:ring-[#009FF2] focus:border-transparent"
+                    className="w-full px-5 py-4 bg-gray-50 border border-gray-300 rounded-2xl pr-12 focus:ring-2 focus:ring-[#009FF2] focus:border-transparent outline-none"
                   />
                   <button
                     onClick={() =>
@@ -179,7 +179,7 @@ const UserProfilePage = () => {
                   <input
                     type={showPassword.new ? "text" : "password"}
                     placeholder="Enter Password"
-                    className="w-full px-5 py-4 bg-white border border-gray-300 rounded-2xl pr-12 focus:ring-2 focus:ring-[#009FF2] focus:border-transparent"
+                    className="w-full px-5 py-4 bg-white border border-gray-300 rounded-2xl pr-12 focus:ring-2 focus:ring-[#009FF2] focus:border-transparent outline-none"
                   />
                   <button
                     onClick={() =>
@@ -206,7 +206,7 @@ const UserProfilePage = () => {
                   <input
                     type={showPassword.confirm ? "text" : "password"}
                     placeholder="Enter Password"
-                    className="w-full px-5 py-4 bg-white border border-gray-300 rounded-2xl pr-12 focus:ring-2 focus:ring-[#009FF2] focus:border-transparent"
+                    className="w-full px-5 py-4 bg-white border border-gray-300 rounded-2xl pr-12 focus:ring-2 focus:ring-[#009FF2] focus:border-transparent outline-none"
                   />
                   <button
                     onClick={() =>

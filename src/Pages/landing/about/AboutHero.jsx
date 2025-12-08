@@ -4,8 +4,8 @@ const AboutHero = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="w-full bg-gradient-to-br from-[#E6F5FF] via-[#F0FAFF] to-[#E6F5FF] py-20 md:py-28 lg:py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-gradient-to-br from-[#E6F5FF] via-[#F0FAFF] to-[#E6F5FF] py-20 md:py-28 lg:py-24 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-10 2xl:px-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left – Content */}
             <div className="space-y-8 lg:space-y-10">
@@ -37,7 +37,7 @@ const AboutHero = () => {
               <img
                 src={aboutImage}
                 alt="Custom orthopedic insole being placed in foot"
-                className="w-full max-w-md lg:max-w-lg rounded-3xl  object-cover"
+                className="w-full max-w-md lg:max-w-xl rounded-3xl  object-cover"
               />
             </div>
           </div>
@@ -46,7 +46,7 @@ const AboutHero = () => {
 
       {/* Stats Section */}
       <section className="w-full bg-white py-16 md:py-20 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-10 2xl:px-0">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {[
               { number: "10,000+", label: "Insoles Designed" },
@@ -55,7 +55,7 @@ const AboutHero = () => {
               { number: "50+", label: "Countries Served" },
             ].map((stat) => (
               <div key={stat.label} className="space-y-2">
-                <h3 className="text-4xl  font-bold bg-gradient-to-r from-[#009FF2] to-[#00D4FF] bg-clip-text text-transparent">
+                <h3 className="md:text-5xl text-3xl font-bold bg-gradient-to-r from-[#009FF2] to-[#00D4FF] bg-clip-text text-transparent">
                   {stat.number}
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base font-medium">

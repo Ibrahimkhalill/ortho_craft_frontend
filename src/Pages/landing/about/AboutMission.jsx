@@ -2,16 +2,16 @@ import missionImage from "../../../assets/images/quality-insole.png"; // ← you
 
 const AboutMission = () => {
   return (
-    <section className="w-full bg-gradient-to-br from-[#E6F5FF] via-[#F0FAFF] to-[#E6F5FF] py-20 md:py-28 lg:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-gradient-to-br from-[#E6F5FF] via-[#F0FAFF] to-[#E6F5FF] py-14 sm:py-20 ">
+      <div className="container mx-auto px-4 sm:px-10 2xl:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left – Content */}
           <div className="space-y-8">
             {/* Icon + Title */}
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-[#009FF2] rounded-full flex items-center justify-center shadow-lg">
+              <div className="sm:w-14 sm:h-14 w-12 h-12 bg-[#009FF2] rounded-full flex items-center justify-center shadow-lg">
                 <svg
-                  className="w-8 h-8 text-white"
+                  className="sm:w-8 sm:h-8 h-7 w-7 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24">
@@ -23,13 +23,13 @@ const AboutMission = () => {
                   />
                 </svg>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
                 Our Mission
               </h2>
             </div>
 
             {/* Description Paragraphs */}
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <div className="space-y-6 sm:text-lg text-base  text-gray-700 leading-relaxed">
               <p>
                 We believe that every patient deserves access to high-quality,
                 custom orthopedic solutions. Traditional orthotic manufacturing
@@ -51,7 +51,7 @@ const AboutMission = () => {
             <img
               src={missionImage}
               alt="Healthcare professional fitting custom green insole"
-              className="w-full max-w-lg rounded-3xl  object-cover"
+              className="w-full max-w-xl rounded-3xl  object-cover"
             />
           </div>
         </div>

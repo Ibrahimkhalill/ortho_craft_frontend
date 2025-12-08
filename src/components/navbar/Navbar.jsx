@@ -35,8 +35,8 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="w-full border-b border-gray-200 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="w-full sticky top-0 z-50  border-b border-gray-200 bg-white">
+      <div className=" container mx-auto  px-2  sm:px-10 2xl:px-0">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo - Ortho Craft Text */}
           <div className="flex-shrink-0">
@@ -101,7 +101,7 @@ const Navbar = () => {
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out border-t border-gray-200 bg-white ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}>
-        <div className="px-4 py-6 space-y-4">
+        <div className="px-4 py-4 ">
           {navLinks.map((link) => (
             <Link
               key={link.to}

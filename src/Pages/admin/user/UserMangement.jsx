@@ -15,8 +15,8 @@ const UserManagement = () => {
       name: "Alexa",
       email: "example@gmail.com",
       avatar: "",
-      subscription: "Pro",
-      insoles: 21,
+      subscription: "Jane Doe",
+      insoles: "Nov 24, 2025",
       lastActive: "20 mins ago",
       status: "Active",
     },
@@ -26,7 +26,7 @@ const UserManagement = () => {
       email: "example@gmail.com",
       avatar: "",
       subscription: "Basic",
-      insoles: 3,
+      insoles: "Nov 24, 2025",
       lastActive: "20 mins ago",
       status: "Active",
     },
@@ -35,8 +35,8 @@ const UserManagement = () => {
       name: "Alexa",
       email: "example@gmail.com",
       avatar: "",
-      subscription: "Medium",
-      insoles: 7,
+      subscription: "kabir",
+      insoles: "Nov 24, 2025",
       lastActive: "20 mins ago",
       status: "Inactive",
     },
@@ -45,8 +45,8 @@ const UserManagement = () => {
       name: "Alex",
       email: "example@gmail.com",
       avatar: "",
-      subscription: "Pro",
-      insoles: 23,
+      subscription: "Jane Doe",
+      insoles: "Nov 24, 2025",
       lastActive: "20 mins ago",
       status: "Active",
     },
@@ -55,8 +55,8 @@ const UserManagement = () => {
       name: "Alexa",
       email: "example@gmail.com",
       avatar: "",
-      subscription: "Medium",
-      insoles: 9,
+      subscription: "kabir",
+      insoles: "Nov 24, 2025",
       lastActive: "20 mins ago",
       status: "Active",
     },
@@ -65,8 +65,8 @@ const UserManagement = () => {
       name: "Alex",
       email: "example@gmail.com",
       avatar: "",
-      subscription: "Pro",
-      insoles: 31,
+      subscription: "Jane Doe",
+      insoles: "Nov 24, 2025",
       lastActive: "20 mins ago",
       status: "Inactive",
     },
@@ -98,7 +98,7 @@ const UserManagement = () => {
         />
         <StatCard
           icon={UsersRound}
-          label="Pro Users"
+          label="Jane Doe Users"
           value="2,489"
           change="8.5%"
           bgColor="#E6FFE7"
@@ -144,17 +144,15 @@ const UserManagement = () => {
             <thead className="bg-[#E6F5FE] border-b border-gray-200">
               <tr>
                 <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">
-                  User
+                  Patient Name
                 </th>
                 <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">
-                  Subscription
+                  Reference
                 </th>
                 <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">
-                  Insoles Created
+                  Creation Date
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">
-                  Last Active
-                </th>
+
                 <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">
                   Status
                 </th>
@@ -168,23 +166,21 @@ const UserManagement = () => {
                 <tr key={user.id} className="hover:bg-gray-50 transition">
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-gray-200 border-2 border-dashed border-gray-300 flex-shrink-0" />
                       <div>
-                        <p className="font-medium text-gray-900">{user.name}</p>
-                        <p className="text-sm text-gray-500">{user.email}</p>
+                        <p className="font-kabir text-gray-900">{user.name}</p>
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 font-medium text-gray-900">
+                  <td className="px-6 py-4 font-kabir text-gray-900">
                     {user.subscription}
                   </td>
-                  <td className="px-6 py-4 font-medium text-gray-900">
+                  <td className="px-6 py-4 font-kabir text-gray-900">
                     {user.insoles}
                   </td>
-                  <td className="px-6 py-4 text-gray-600">{user.lastActive}</td>
+
                   <td className="px-6 py-4">
                     <span
-                      className={`inline-flex px-4 py-2 rounded-full text-sm font-medium ${
+                      className={`inline-flex px-4 py-2 rounded-full text-sm font-kabir ${
                         user.status === "Active"
                           ? "bg-green-100 text-green-700"
                           : "bg-gray-100 text-gray-600"

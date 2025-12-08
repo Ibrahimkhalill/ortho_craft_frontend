@@ -20,47 +20,49 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="w-full py-20  overflow-hidden">
+    <section className="w-full py-16  overflow-hidden">
       {/* Gradient Background */}
-      <div className="bg-gradient-to-br from-[#E6F5FF] via-[#F0FAFF] to-[#E6F5FF] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-br from-[#E6F5FF] via-[#F0FAFF] to-[#E6F5FF] py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-10 2xl:px-0">
           {/* Badge */}
           <div className="flex justify-center mb-6">
-            <span className="inline-flex items-center px-5 py-2 rounded-full bg-white/80 backdrop-blur-sm text-[#009FF2] text-sm font-semibold border border-[#BCE3FA] shadow-sm">
+            <span className="inline-flex items-center px-4 sm:px-5 py-2 rounded-full bg-white/80 backdrop-blur-sm text-[#009FF2] text-sm font-semibold border border-[#BCE3FA] shadow-sm">
               Process
             </span>
           </div>
 
           {/* Main Heading with Gradient */}
-          <h2 className="text-4xl  font-bold text-center mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl  font-bold text-center mb-4">
             <span className="bg-gradient-to-r from-[#009FF2] to-[#00D4FF] bg-clip-text text-transparent">
               How It Works
             </span>
           </h2>
 
           {/* Subheading */}
-          <p className="text-center text-gray-600 text-lg md:text-xl max-w-2xl mx-auto mb-16">
+          <p className="text-center text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-12 md:mb-16">
             Get your custom insoles in three simple steps
           </p>
 
           {/* 3 Step Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                className="group bg-white rounded-3xl p-6 md:p-8 items-center shadow hover:shadow-2xl transition-all duration-300 border border-gray-100">
                 {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-br from-[#009FF2] to-[#00C4FF] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#009FF2] to-[#00C4FF] rounded-2xl flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow">
                   <div className="text-white">{step.icon}</div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl  font-bold text-gray-900 mb-3 sm:mb-4">
                   {step.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed">{step.desc}</p>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>

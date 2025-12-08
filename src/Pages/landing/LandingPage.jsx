@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Upload, SlidersHorizontal, Download } from "lucide-react";
 import HowItWorksSection from "./HowItWorksSection";
 import WhyChooseUsSection from "./WhyChooseUsSection";
+
 export default function ChoosLanding() {
   const features = [
     {
@@ -29,20 +30,21 @@ export default function ChoosLanding() {
       desc: "Download production-ready files in multiple formats. Ready for 3D printing or professional manufacturing.",
     },
   ];
+
   return (
     <>
-      <div className="w-full min-h-screen">
+      <div className="w-full min-h-screen ">
         {/* Hero Section */}
         <Navbar />
-        <section className="w-full overflow-hidden">
+        <section className="w-full overflow-hidden ">
           {/* Light Blue Gradient Background */}
           <div className="bg-gradient-to-br from-[#E6F5FF] via-[#F0FAFF] to-[#E6F5FF]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+            <div className=" container mx-auto px-4 sm:px-10 2xl:px-0 py-16 md:py-24 ">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 {/* Left Content */}
                 <div className="text-center lg:text-left space-y-8 lg:space-y-10">
                   {/* Main Heading with Gradient Text */}
-                  <h1 className="text-4xl font-bold leading-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl  font-bold leading-tight">
                     Custom Orthopedic
                     <br />
                     Insoles,{" "}
@@ -52,7 +54,7 @@ export default function ChoosLanding() {
                   </h1>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-2xl">
+                  <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0">
                     Create perfectly fitted custom insoles using advanced 3D
                     technology and AI-powered biomechanical analysis.
                     Professional results, accessible to everyone.
@@ -62,11 +64,11 @@ export default function ChoosLanding() {
                   <div className="pt-4">
                     <Link
                       to="/custom" // or "/chat", "/upload-foot-scan", etc.
-                      className="inline-flex items-center gap-3 bg-[#009FF2] hover:bg-[#0088d1] text-white font-semibold text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                      className="inline-flex items-center gap-2 sm:gap-3 bg-[#009FF2] hover:bg-[#0088d1] text-white font-semibold text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                       Start Designing Now
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
+                        className="h-5 w-5 sm:h-6 sm:w-6"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -88,19 +90,22 @@ export default function ChoosLanding() {
                     <img
                       src={insoleImage}
                       alt="Custom orthopedic insole being placed in shoe"
-                      className="w-full max-w-lg rounded-3xl  object-cover"
+                      className="w-full max-w-2xl rounded-3xl object-cover"
                     />
 
                     {/* Floating Badge - 10,000+ Insoles Designed */}
-                    <div className="absolute  left-16 -bottom-12 lg:-translate-x-0 lg:-bottom-10 lg:-left-20 bg-white rounded-2xl shadow  px-6 py-4 flex items-center gap-3 border border-gray-100 whitespace-nowrap">
-                      <div className="p-3 bg-[#009FF2] rounded-xl">
-                        <Sparkles size={20} className="text-[#FFFFFF]" />
+                    <div className="absolute left-1/2 -translate-x-1/2 -bottom-8 sm:-bottom-10 lg:right-auto lg:-translate-x-0 lg:-bottom-10 lg:-left-20 bg-white rounded-2xl shadow px-4 sm:px-6 py-3 sm:py-4 flex items-center gap-2 sm:gap-3 border border-gray-100 whitespace-nowrap">
+                      <div className="p-2 sm:p-3 bg-[#009FF2] rounded-xl">
+                        <Sparkles
+                          size={18}
+                          className="text-[#FFFFFF] sm:w-5 sm:h-5"
+                        />
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-gray-900">
+                        <div className="text-xl sm:text-2xl font-bold text-gray-900">
                           10,000+
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-xs sm:text-sm text-gray-600">
                           Insoles Designed
                         </div>
                       </div>
@@ -113,8 +118,8 @@ export default function ChoosLanding() {
         </section>
 
         {/* Why Choose Section */}
-        <section className="w-full bg-white py-16 md:py-24 lg:py-32">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="w-full bg-white py-16 md:py-24">
+          <div className="container mx-auto px-4 sm:px-10 2xl:px-0">
             {/* Badge */}
             <div className="flex justify-center mb-6">
               <span className="inline-flex items-center px-4 py-2 rounded-full bg-[#E6F5FF] text-[#009FF2] text-sm font-medium border border-[#BCE3FA]">
@@ -123,12 +128,12 @@ export default function ChoosLanding() {
             </div>
 
             {/* Main Heading */}
-            <h2 className="text-4xl  font-bold text-center text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
               Everything You Need
             </h2>
 
             {/* Subheading */}
-            <p className="text-center text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-12 md:mb-20">
+            <p className="text-center text-gray-600 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-12 md:mb-20">
               Professional-grade tools and AI technology to create perfect
               custom insoles
             </p>
@@ -138,14 +143,14 @@ export default function ChoosLanding() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200">
+                  className="group bg-white md:p-8 p-6 rounded-3xl shadow hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200">
                   {/* Icon */}
                   <div className="w-16 h-16 bg-[#009FF2] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <div className="text-white">{feature.icon}</div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-xl  font-bold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
 
